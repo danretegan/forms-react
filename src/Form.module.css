@@ -1,0 +1,11 @@
+.form {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: end;
+  color: blue;
+}
+
+.form input {
+  color: blue;
+  border: 1px solid blue;
+}
