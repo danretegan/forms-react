@@ -1,5 +1,5 @@
-import React from "react";
 import { Component } from "react";
+import PropTypes from "prop-types";
 import styles from "./SignUpForm.module.css";
 
 // Folosim Enumerable pentru a evita antipattern-ul "magic strings":
@@ -30,6 +30,10 @@ class SignUpForm extends Component {
     // atunci vom lua valoarea din atributul checked,
     // în caz contrar, din atributul value
     this.setState({ [name]: type === "checkbox" ? checked : value });
+  };
+
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
   };
 
   handleSubmit = (e) => {
