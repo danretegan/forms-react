@@ -32,10 +32,6 @@ class SignUpForm extends Component {
     this.setState({ [name]: type === "checkbox" ? checked : value });
   };
 
-  static propTypes = {
-    onSubmit: PropTypes.func.isRequired,
-  };
-
   handleSubmit = (e) => {
     e.preventDefault();
     const { login, email, password, agreed } = this.state;
@@ -47,7 +43,7 @@ class SignUpForm extends Component {
   };
 
   reset = () => {
-    this.setState({ ...INITIAL_STATE });
+    this.setState(INITIAL_STATE);
   };
 
   render() {
@@ -150,3 +146,7 @@ class SignUpForm extends Component {
 }
 
 export default SignUpForm;
+
+SignUpForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
