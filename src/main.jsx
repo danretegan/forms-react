@@ -1,9 +1,9 @@
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import Form from "./Form";
-import SignUpForm from "./SignUpForm";
+import Form from "./Form/Form";
+import SignUpForm from "./SignUpForm/SignUpForm";
 import "./index.css";
-import LoginForm from "./LoginForm";
+import LoginForm from "./LoginForm/LoginForm";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
